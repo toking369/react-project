@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"></div>
+	<!-- 引入React和ReactDOM的CDN -->
+	<script src="./js/react.js"></script>
+	<script src="./js/react-dom.js"></script>
+	<script>
+		// 定义一个LikeButton组件
+		function LikeButton() {
+		    // 当按钮被点击时，弹出hello world的提示框
+		    return React.createElement('button', { onClick: () => alert('hello world') }, 'click me')
+		}
+
+		// 获取id为root的div元素
+		const rootNode = document.getElementById('root')
+		// 创建一个React根节点
+		const root=ReactDOM.createRoot(rootNode)
+		// 将LikeButton组件渲染到根节点上
+		root.render(React.createElement(LikeButton))
+	</script>
+	</script>
+</body>
+</html>
